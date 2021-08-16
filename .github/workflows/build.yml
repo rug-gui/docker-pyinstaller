@@ -8,11 +8,14 @@ env:
 
 jobs:
   docker:
+    runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.experimental }}
     strategy:
       fail-fast: false
       matrix:
         python: ["py3"]
         architecture: ["amd64", "i386", "win32", "win64"]
+        experimental: [false]
         include:
           - python: "py2"
             architecture: "amd64"
@@ -21,7 +24,6 @@ jobs:
             architecture: "win32"
             experimental: true
 
-    runs-on: ubuntu-latest
     steps:
       -
         name: Set up QEMU
