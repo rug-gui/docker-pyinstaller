@@ -77,7 +77,7 @@ Added Python 3.5 on Windows, thanks (again) to @bmustiata
 
 #### [1.3] - 2017-01-23
 Upgraded PyInstaller to version 3.2.1.
-Thanks to @bmustiata for contributing:
+Thanks to @bmustiata for contributing: 
  - Custom PyPi URLs
  - No longer need to supply a requirements.txt file if your project doesn't need it
  - PyInstaller can be called directly, for e.g to generate a spec file
